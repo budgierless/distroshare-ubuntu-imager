@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Distroshare Ubuntu Imager - https://www.distroshare.com
+#MMG Distroshare Ubuntu Imager - http://morganmultimediagroup.com
 #
 #Makes a Live cd that is installable from your current installation
 #This is intended to work on Ubuntu and its derivatives
