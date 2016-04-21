@@ -16,10 +16,10 @@ echo "
 ################################################
 ######                                    ######
 ######                                    ######
-###### Distroshare Ubuntu Imager $VERSION   ######
+###### Distroshare Ubuntu Imager $VERSION ######
 ######                                    ######
 ######                                    ######
-###### Brought to you by morganmultimediagroup.com  ######
+# Brought to you by morganmultimediagroup.com  #
 ######                                    ######
 ######                                    ######
 ################################################
