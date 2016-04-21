@@ -145,15 +145,7 @@ fi
 echo "Copying the current system to the new directories"
 rsync -a --one-file-system --exclude=/proc/* --exclude=/dev/* \
 --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* \
---exclude=/var/www/clients/* --exclude=/home/distroshare/* \
---exclude=/home/budgierless/.config/autostart/synergy.desktop \
---exclude=/home/budgierless/src/* \
---exclude=/home/budgierless/Downloads/* \
---exclude=/home/budgierless/VirtualBox VMs/* \
---exclude=/home/budgierless/.vagrant.d/boxes/* \
---exclude=/**/*.iso \
---exclude=/home/budgierless/mnt/* \
---exclude=/lost+found \
+--exclude=/var/www/clients/* --exclude=/home/* --exclude=/lost+found \
 --exclude=/usr/src/* --exclude=/usr/local/src/* --exclude=/tmp/* --exclude=/tmp_old/* \
 --exclude=/var/tmp/* --exclude=/boot --exclude=/root/* \
 --exclude=/var/mail/* --exclude=/var/spool/* --exclude=/media/* \
