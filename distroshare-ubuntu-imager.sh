@@ -19,7 +19,7 @@ echo "
 ###### Distroshare Ubuntu Imager $VERSION   ######
 ######                                    ######
 ######                                    ######
-###### Brought to you by distroshare.com  ######
+###### Brought to you by morganmultimediagroup.com  ######
 ######                                    ######
 ######                                    ######
 ################################################
@@ -145,7 +145,8 @@ fi
 echo "Copying the current system to the new directories"
 rsync -a --one-file-system --exclude=/proc/* --exclude=/dev/* \
 --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* \
---exclude=/home/* --exclude=/lost+found \
+--exclude=/home/* --exclude=/var/www/clients/* --exclude=/lost+found \
+--exclude=/usr/src/* --exclude=/usr/local/src/* --exclude=/tmp/* --exclude=/tmp_old/* \
 --exclude=/var/tmp/* --exclude=/boot --exclude=/root/* \
 --exclude=/var/mail/* --exclude=/var/spool/* --exclude=/media/* \
 --exclude=/etc/hosts --exclude=/etc/default/locale \
@@ -351,7 +352,7 @@ echo "Removing non-system users"
 for i in `cat "${WORK}"/rootfs/etc/passwd | awk -F":" '{print $1}'`
 do
    uid=`cat "${WORK}"/rootfs/etc/passwd | grep "^${i}:" | awk -F":" '{print $3}'`
-   [ "$uid" -gt "998" -a  "$uid" -ne "65534"  ] && \
+   [ "$uid" -gt "1000" -a  "$uid" -ne "65534"  ] && \
        chroot "${WORK}"/rootfs /bin/bash -c "userdel --force ${i} 2> /dev/null"
 done
 
@@ -599,10 +600,7 @@ chainloader +1
 " > "${CD}"/boot/grub/grub.cfg
 
 echo "Creating the iso"
-grub-mkrescue -o "${WORK}"/live-cd.iso "${CD}"
+grub-mkrescue -o "${WORK}"/live-cd.iso "${CD}" -- -iso-level 4
 
 echo "We are done."
-echo "Is your distro interesting or customized for a specific machine?"
-echo "How about sharing it at https://www.distroshare.com?"
-echo "You will help others and you could receive donations for your work."
 echo ""
