@@ -146,7 +146,7 @@ echo "Copying the current system to the new directories"
 rsync -a --one-file-system --exclude=/proc/* --exclude=/dev/* \
 --exclude=/sys/* --exclude=/tmp/* --exclude=/run/* \
 --exclude=/var/www/clients/* --exclude=/home/* --exclude=/lost+found \
---exclude=/usr/src/* --exclude=/usr/local/src/* --exclude=/tmp/* --exclude=/tmp_old/* \
+--exclude=/usr/src/* --exclude=/usr/local/src/* --exclude=/tmp_old/* \
 --exclude=/var/tmp/* --exclude=/boot --exclude=/root/* \
 --exclude=/var/mail/* --exclude=/var/spool/* --exclude=/media/* \
 --exclude=/etc/hosts --exclude=/etc/default/locale \
