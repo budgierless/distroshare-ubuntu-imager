@@ -16,7 +16,7 @@ echo "
 ################################################
 ######                                    ######
 ######                                    ######
-###### Distroshare Ubuntu Imager $VERSION ######
+###### Distroshare Ubuntu Imager $VERSION   ######
 ######                                    ######
 ######                                    ######
 # Brought to you by morganmultimediagroup.com  #
@@ -600,7 +600,7 @@ chainloader +1
 " > "${CD}"/boot/grub/grub.cfg
 
 echo "Creating the iso"
-grub-mkrescue -o "${WORK}"/live-cd.iso "${CD}" -- -iso-level 4
+grub-mkrescue -o "${WORK}"/live-cd.iso "${CD}" -J -iso-level 3
 
 echo "We are done."
 echo ""
