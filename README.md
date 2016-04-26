@@ -1,7 +1,7 @@
 MMG Distroshare Ubuntu Imager
 =========================
 MMG Edition - Large ISO support
-=========================
+
 This project is brought to you by morganmultimediagroup.com based on Disroshare's script.  Distroshare.com is 
 a new site for sharing customized open source operating system distributions.  
 Too often do users need to customize open source operating systems, 
